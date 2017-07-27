@@ -5,6 +5,7 @@
     <color name="colorAccent">#FF4081</color>
 
     <color name="lesson2Background">#ecedef</color>
+    <color name="mainBackground">#f4f5f7</color>
     <color name="buttonsColor">#7dbfce</color>
     <color name="textColor">#484445</color>
     <color name="redColor">#f92428</color>
