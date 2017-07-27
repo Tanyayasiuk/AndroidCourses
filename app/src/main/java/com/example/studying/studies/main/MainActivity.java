@@ -9,6 +9,7 @@ import android.widget.Button;
 
 import com.example.studying.studies.R;
 import com.example.studying.studies.dz1.Dz1Activity;
+import com.example.studying.studies.dz2.Dz2Activity;
 import com.example.studying.studies.lesson2.Lesson2Activity;
 
 
@@ -25,6 +26,16 @@ public class MainActivity extends Activity {
 
                 //Намерение. Объект который для нас что-то сделает
                 Intent intent = new Intent(MainActivity.this, Lesson2Activity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button dz2Button = findViewById(R.id.dz2Button);
+        dz2Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(MainActivity.this, Dz2Activity.class);
                 startActivity(intent);
             }
         });

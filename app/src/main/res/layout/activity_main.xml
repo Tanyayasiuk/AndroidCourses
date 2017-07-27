@@ -8,9 +8,15 @@
         android:id="@+id/dz1Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="DZ1"
+        android:text="DZ-1"
         />
 
+    <Button
+        android:id="@+id/dz2Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DZ-2"
+        />
 
 
 </LinearLayout>
