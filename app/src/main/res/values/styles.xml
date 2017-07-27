@@ -8,4 +8,13 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!--Стиль для кнопки-->
+    <style name="loginButton">
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:background">@color/buttonsColor</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_marginRight">60sp</item>
+        <item name="android:layout_marginLeft">60sp</item>
+    </style>
+
 </resources>

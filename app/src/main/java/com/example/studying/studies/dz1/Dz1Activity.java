@@ -1,13 +1,17 @@
-package com.example.studying.studies;
+package com.example.studying.studies.dz1;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{ //variant #1 for click
+import com.example.studying.studies.R;
+
+public class Dz1Activity extends AppCompatActivity implements View.OnClickListener{ //variant #1 for click
+
+    public static final String KEY_USERNAME = "KEY_USERNAME";
+    public static final String KEY_PASSWORD = "KEY_PASSWORD";
 
     private Button mixButton;
     private TextView text1;
@@ -25,7 +29,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_dz1);
+
+        String username = getIntent().getStringExtra(KEY_USERNAME);
+        String password = getIntent().getStringExtra(KEY_PASSWORD);
+
 
         mixButton = (Button) findViewById(R.id.mix_button);
         text1 = (TextView) findViewById(R.id.textView1);
@@ -34,6 +42,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         text1.setOnClickListener(listener);
         text2.setOnClickListener(this);
 
+        text1.setText(username);
+        text2.setText(password);
+
         //variant #3 for click
         mixButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,7 +52,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 mix();
             }
         });
+
     }
+
+
 
     @Override
     public void onClick(View view) {

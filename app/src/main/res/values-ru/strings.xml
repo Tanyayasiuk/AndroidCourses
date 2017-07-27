@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Studies</string>
+    <string name="hello_string">Hello</string>
+    <string name="world_string">World!</string>
+    <string name="mix_button">Mix!</string>
+
+                <!--Lesson2-->
+    <string name="lesson2_name">Имя</string>
+    <string name="login_button">Войти</string>
+</resources>
