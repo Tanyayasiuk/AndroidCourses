@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.studying.studies">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -19,7 +21,9 @@
 
         <activity android:name=".dz1.Dz1Activity"/>
         <activity android:name=".lesson2.Lesson2Activity"/>
+        <activity android:name=".lesson3.Lesson3Activity"/>
         <activity android:name=".dz2.Dz2Activity"/>
+        <activity android:name=".dz3.Dz3Activity"/>
     </application>
 
 </manifest>

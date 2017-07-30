@@ -1,6 +1,7 @@
 package com.example.studying.studies.main;
 
 import android.app.Activity;
+import android.app.Application;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -10,14 +11,27 @@ import android.widget.Button;
 import com.example.studying.studies.R;
 import com.example.studying.studies.dz1.Dz1Activity;
 import com.example.studying.studies.dz2.Dz2Activity;
+import com.example.studying.studies.dz3.Dz3Activity;
 import com.example.studying.studies.lesson2.Lesson2Activity;
+import com.example.studying.studies.lesson3.Lesson3Activity;
+import com.squareup.leakcanary.LeakCanary;
 
 
 public class MainActivity extends Activity {
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+/*        if (LeakCanary.isInAnalyzerProcess(this)) {
+            // This process is dedicated to LeakCanary for heap analysis.
+            // You should not init your app in this process.
+            return;
+        }
+        LeakCanary.install(this);*/
+
         setContentView(R.layout.activity_main); // подключаем лэйаут
+
 
         Button dz1Button = findViewById(R.id.dz1Button);
         dz1Button.setOnClickListener(new View.OnClickListener() {
@@ -37,6 +51,17 @@ public class MainActivity extends Activity {
 
                 Intent intent = new Intent(MainActivity.this, Dz2Activity.class);
                 startActivity(intent);
+            }
+        });
+
+        Button dz3Button = findViewById(R.id.dz3Button);
+        dz3Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(MainActivity.this, Dz3Activity.class);
+                startActivity(intent);
+
             }
         });
     }

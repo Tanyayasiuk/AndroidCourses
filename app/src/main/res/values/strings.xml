@@ -7,4 +7,11 @@
                 <!--Lesson2-->
     <string name="lesson2_name">Name</string>
     <string name="login_button">Login</string>
+    <string name="lesson3button">BUTTON</string>
+    <string name="lesson3view">kitten</string>
+    <string name="dz3Button">show!</string>
+    <string name="dz3imageDescription">banana</string>
+    <string name="dz3image">url</string>
+
+
 </resources>
