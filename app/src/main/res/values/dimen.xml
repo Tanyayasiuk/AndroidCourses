@@ -2,4 +2,7 @@
 <resources>
     <dimen name="lesson2_start_end_padding">20dp</dimen>
     <dimen name="dz2_start_end_padding">20dp</dimen>
+    <dimen name="dz4_start_end_padding">30dp</dimen>
+    <dimen name="text_size">34dp</dimen>
+    <dimen name="button_text_size">20dp</dimen>
 </resources>

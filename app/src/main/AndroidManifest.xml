@@ -3,8 +3,10 @@
     package="com.example.studying.studies">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/> <!--//Проверка доступности интернета-->
 
     <application
+        android:name=".main.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -24,6 +26,10 @@
         <activity android:name=".lesson3.Lesson3Activity"/>
         <activity android:name=".dz2.Dz2Activity"/>
         <activity android:name=".dz3.Dz3Activity"/>
+        <activity android:name=".lesson4.Lesson4Activity"/>
+        <activity android:name=".dz4.Dz4Activity"/>
+        <activity android:name=".dz4.BlinkOwlActivity"/>
+        <activity android:name=".dz4.ClockActivity"/>
     </application>
 
 </manifest>

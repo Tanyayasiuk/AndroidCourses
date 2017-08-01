@@ -28,5 +28,13 @@
         android:text="DZ-3"
         />
 
+    <Button
+        android:id="@+id/dz4Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="DZ-4"
+        />
+
 
 </LinearLayout>

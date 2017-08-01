@@ -9,4 +9,9 @@
     <color name="buttonsColor">#7dbfce</color>
     <color name="textColor">#484445</color>
     <color name="redColor">#f92428</color>
+
+                <!--for dz4-->
+    <color name="clockColor">#535666</color>
+    <color name="numbersColor">#525273</color>
+    <color name="backColor">#ecebe9</color>
 </resources>

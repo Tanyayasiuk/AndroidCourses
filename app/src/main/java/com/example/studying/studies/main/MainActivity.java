@@ -12,8 +12,10 @@ import com.example.studying.studies.R;
 import com.example.studying.studies.dz1.Dz1Activity;
 import com.example.studying.studies.dz2.Dz2Activity;
 import com.example.studying.studies.dz3.Dz3Activity;
+import com.example.studying.studies.dz4.Dz4Activity;
 import com.example.studying.studies.lesson2.Lesson2Activity;
 import com.example.studying.studies.lesson3.Lesson3Activity;
+import com.example.studying.studies.lesson4.Lesson4Activity;
 import com.squareup.leakcanary.LeakCanary;
 
 
@@ -22,14 +24,6 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-/*        if (LeakCanary.isInAnalyzerProcess(this)) {
-            // This process is dedicated to LeakCanary for heap analysis.
-            // You should not init your app in this process.
-            return;
-        }
-        LeakCanary.install(this);*/
-
         setContentView(R.layout.activity_main); // подключаем лэйаут
 
 
@@ -61,6 +55,20 @@ public class MainActivity extends Activity {
 
                 Intent intent = new Intent(MainActivity.this, Dz3Activity.class);
                 startActivity(intent);
+
+            }
+        });
+
+        Button dz4Button = findViewById(R.id.dz4Button);
+        dz4Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(MainActivity.this, Dz4Activity.class);
+                startActivity(intent);
+               //Задает анимацию смены активити
+                overridePendingTransition(R.anim.right_in, R.anim.left_out);
+
 
             }
         });

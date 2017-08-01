@@ -12,6 +12,12 @@
     <string name="dz3Button">show!</string>
     <string name="dz3imageDescription">banana</string>
     <string name="dz3image">url</string>
+                <!--dz4-->
+    <string name="dz4_1">Owl</string>
+    <string name="dz4_2">Clock</string>
+    <string name="dz4start">Моргай!</string>
+    <string name="dz4stop">Хватит</string>
+    <string name="dz4imageDescription">blinking owl</string>
 
 
 </resources>
