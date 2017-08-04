@@ -145,6 +145,7 @@ public class ClockView extends View {
         canvas.rotate(6 * minutes, cx, cy);
         canvas.drawLine(cx, cy, cx, cy-radius/1.5f, myClockPaint);
         canvas.rotate(-6 * minutes, cx, cy);
+        //вместо этого - метод restore
 
         canvas.rotate(6 * seconds, cx, cy);
         canvas.drawLine(cx, cy, cx, cy-radius, myNumbersPaint);

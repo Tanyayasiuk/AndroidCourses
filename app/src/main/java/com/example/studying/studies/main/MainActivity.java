@@ -1,7 +1,6 @@
 package com.example.studying.studies.main;
 
 import android.app.Activity;
-import android.app.Application;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -9,15 +8,11 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.studying.studies.R;
-import com.example.studying.studies.dz1.Dz1Activity;
 import com.example.studying.studies.dz2.Dz2Activity;
 import com.example.studying.studies.dz3.Dz3Activity;
 import com.example.studying.studies.dz4.Dz4Activity;
+import com.example.studying.studies.dz5.Dz5Activity;
 import com.example.studying.studies.lesson2.Lesson2Activity;
-import com.example.studying.studies.lesson3.Lesson3Activity;
-import com.example.studying.studies.lesson4.Lesson4Activity;
-import com.squareup.leakcanary.LeakCanary;
-
 
 public class MainActivity extends Activity {
 
@@ -66,7 +61,21 @@ public class MainActivity extends Activity {
 
                 Intent intent = new Intent(MainActivity.this, Dz4Activity.class);
                 startActivity(intent);
-               //Задает анимацию смены активити
+                //Задает анимацию смены активити
+                overridePendingTransition(R.anim.right_in, R.anim.left_out);
+
+
+            }
+        });
+
+        Button dz5Button = findViewById(R.id.dz5Button);
+        dz5Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(MainActivity.this, Dz5Activity.class);
+                startActivity(intent);
+                //Задает анимацию смены активити
                 overridePendingTransition(R.anim.right_in, R.anim.left_out);
 
 

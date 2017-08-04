@@ -19,5 +19,9 @@
     <string name="dz4stop">Хватит</string>
     <string name="dz4imageDescription">blinking owl</string>
 
+                     <!--dz5-->
+    <string name="dz5On">On</string>
+    <string name="dz5Off">Off</string>
+
 
 </resources>

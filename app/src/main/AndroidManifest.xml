@@ -3,6 +3,7 @@
     package="com.example.studying.studies">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/> <!--//Проверка доступности интернета-->
 
     <application
@@ -30,6 +31,20 @@
         <activity android:name=".dz4.Dz4Activity"/>
         <activity android:name=".dz4.BlinkOwlActivity"/>
         <activity android:name=".dz4.ClockActivity"/>
+        <activity android:name=".lesson5.Lesson5Activity"/>
+        <activity android:name=".dz5.Dz5Activity"/>
+
+        <!--<receiver android:name=".lesson5.MyBroadcastReceiver">
+            <intent-filter>
+                &lt;!&ndash;Указывает события, которые хотим получать&ndash;&gt;
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>-->
+
+        <service android:name=".lesson5.MyService"/>
+        <service android:name=".lesson5.MyIntentService"/>
+        <service android:name=".dz5.MyService"/>
     </application>
 
 </manifest>
