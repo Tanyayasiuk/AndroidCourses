@@ -12,7 +12,9 @@ import com.example.studying.studies.dz2.Dz2Activity;
 import com.example.studying.studies.dz3.Dz3Activity;
 import com.example.studying.studies.dz4.Dz4Activity;
 import com.example.studying.studies.dz5.Dz5Activity;
+import com.example.studying.studies.dz6.Dz6Activity;
 import com.example.studying.studies.lesson2.Lesson2Activity;
+import com.example.studying.studies.lesson6.Lesson6Activity;
 
 public class MainActivity extends Activity {
 
@@ -50,7 +52,6 @@ public class MainActivity extends Activity {
 
                 Intent intent = new Intent(MainActivity.this, Dz3Activity.class);
                 startActivity(intent);
-
             }
         });
 
@@ -63,8 +64,6 @@ public class MainActivity extends Activity {
                 startActivity(intent);
                 //Задает анимацию смены активити
                 overridePendingTransition(R.anim.right_in, R.anim.left_out);
-
-
             }
         });
 
@@ -77,8 +76,18 @@ public class MainActivity extends Activity {
                 startActivity(intent);
                 //Задает анимацию смены активити
                 overridePendingTransition(R.anim.right_in, R.anim.left_out);
+            }
+        });
 
+        Button dz6Button = findViewById(R.id.dz6Button);
+        dz6Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
+                Intent intent = new Intent(MainActivity.this, Dz6Activity.class);
+                startActivity(intent);
+                //Задает анимацию смены активити
+                overridePendingTransition(R.anim.right_in, R.anim.left_out);
             }
         });
     }

@@ -75,7 +75,7 @@ public class Dz5Activity extends Activity{
             } else
                 textView.setText(R.string.dz5Off);
 
-            
+
         }
     };
 }

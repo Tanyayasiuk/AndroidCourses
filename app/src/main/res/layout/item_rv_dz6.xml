@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:layout_marginBottom="10dp"
+    android:layout_marginLeft="@dimen/dz6_start_end_padding"
+    android:layout_marginStart="@dimen/dz6_start_end_padding"
+    android:layout_marginEnd="@dimen/dz6_start_end_padding"
+    android:layout_marginRight="@dimen/dz6_start_end_padding"
+    android:background="@color/view_color">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="5dip"
+            android:layout_marginStart="5dip"
+            android:layout_gravity="center"
+            android:indeterminateDrawable="@drawable/progress_bar"
+            android:indeterminateOnly="true" />
+        <ImageView
+            android:id="@+id/flag_image"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="3dp"
+            android:layout_marginStart="3dp"
+            android:contentDescription="@string/dz6_flag"
+            tools:src="@drawable/button_selector" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/country_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:textSize="@dimen/country_text_size"
+        tools:text="Some country name" />
+
+</LinearLayout>

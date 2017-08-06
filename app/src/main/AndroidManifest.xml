@@ -4,8 +4,9 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/> <!--//Проверка доступности интернета-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
+    <!-- //Проверка доступности интернета -->
     <application
         android:name=".main.MyApplication"
         android:allowBackup="true"
@@ -21,30 +22,35 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".dz1.Dz1Activity" />
+        <activity android:name=".lesson2.Lesson2Activity" />
+        <activity android:name=".lesson3.Lesson3Activity" />
+        <activity android:name=".dz2.Dz2Activity" />
+        <activity android:name=".dz3.Dz3Activity" />
+        <activity android:name=".lesson4.Lesson4Activity" />
+        <activity android:name=".dz4.Dz4Activity" />
+        <activity android:name=".dz4.BlinkOwlActivity" />
+        <activity android:name=".dz4.ClockActivity" />
+        <activity android:name=".lesson5.Lesson5Activity" />
+        <activity android:name=".dz5.Dz5Activity" />
 
-        <activity android:name=".dz1.Dz1Activity"/>
-        <activity android:name=".lesson2.Lesson2Activity"/>
-        <activity android:name=".lesson3.Lesson3Activity"/>
-        <activity android:name=".dz2.Dz2Activity"/>
-        <activity android:name=".dz3.Dz3Activity"/>
-        <activity android:name=".lesson4.Lesson4Activity"/>
-        <activity android:name=".dz4.Dz4Activity"/>
-        <activity android:name=".dz4.BlinkOwlActivity"/>
-        <activity android:name=".dz4.ClockActivity"/>
-        <activity android:name=".lesson5.Lesson5Activity"/>
-        <activity android:name=".dz5.Dz5Activity"/>
-
-        <!--<receiver android:name=".lesson5.MyBroadcastReceiver">
+        <!--
+        <receiver android:name=".lesson5.MyBroadcastReceiver">
             <intent-filter>
                 &lt;!&ndash;Указывает события, которые хотим получать&ndash;&gt;
                 <action android:name="android.net.wifi.WIFI_STATE_CHANGED"/>
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
             </intent-filter>
-        </receiver>-->
+        </receiver>
+        -->
 
-        <service android:name=".lesson5.MyService"/>
-        <service android:name=".lesson5.MyIntentService"/>
-        <service android:name=".dz5.MyService"/>
+        <service android:name=".lesson5.MyService" />
+        <service android:name=".lesson5.MyIntentService" />
+        <service android:name=".dz5.MyService" />
+
+        <activity android:name=".lesson6.Lesson6Activity" />
+        <activity android:name=".dz6.Dz6Activity" />
+
     </application>
 
 </manifest>

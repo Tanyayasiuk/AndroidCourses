@@ -44,5 +44,12 @@
         android:text="DZ-5"
         />
 
+    <Button
+        android:id="@+id/dz6Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="DZ-6"
+        />
 
 </LinearLayout>

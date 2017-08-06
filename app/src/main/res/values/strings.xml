@@ -4,7 +4,7 @@
     <string name="world_string">  World!</string>
     <string name="mix_button">Mix!</string>
 
-                <!--Lesson2-->
+    <!--Lesson2-->
     <string name="lesson2_name">Name</string>
     <string name="login_button">Login</string>
     <string name="lesson3button">BUTTON</string>
@@ -12,16 +12,19 @@
     <string name="dz3Button">show!</string>
     <string name="dz3imageDescription">banana</string>
     <string name="dz3image">url</string>
-                <!--dz4-->
+    <!--dz4-->
     <string name="dz4_1">Owl</string>
     <string name="dz4_2">Clock</string>
     <string name="dz4start">Моргай!</string>
     <string name="dz4stop">Хватит</string>
     <string name="dz4imageDescription">blinking owl</string>
 
-                     <!--dz5-->
+    <!--dz5-->
     <string name="dz5On">On</string>
     <string name="dz5Off">Off</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+    <string name="dz6_flag">flag</string>
 
 
 </resources>
