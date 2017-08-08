@@ -17,7 +17,7 @@ import android.widget.TextView;
 
 public class MyService extends Service {
 
-    public static final String MY_ACTION = "com.example.studying.studies.dz5.MY_ACTION";
+    //public static final String MY_ACTION = "com.example.studying.studies.dz5.MY_ACTION";
     public static final String WIFI_ACTION = "android.net.wifi.STATE_CHANGE";
 
 
@@ -30,18 +30,20 @@ public class MyService extends Service {
                     .getParcelable("networkInfo");
             NetworkInfo.State state = info.getState();
 
-            if (state == NetworkInfo.State.CONNECTED) {
-                Log.e("Hello", "Connected");
-                //localBroadcastManager.sendBroadcast(intentWiFi);
-            } else {
-                Log.e("Hello", "Disconnected");
-                //localBroadcastManager.sendBroadcast(intentMy);
-            }
-
+            LocalBroadcastManager localBroadcastManager = LocalBroadcastManager.getInstance(MyService.this);
             //Intent intentMy = new Intent(MY_ACTION);
             Intent intentWiFi = new Intent(WIFI_ACTION);
-            LocalBroadcastManager localBroadcastManager = LocalBroadcastManager.getInstance(MyService.this);
-            localBroadcastManager.sendBroadcast(intentWiFi);
+
+
+            if (state == NetworkInfo.State.CONNECTED) {
+                Log.e("Hello", "Connected");
+                intentWiFi.putExtra("MY_ACTION", "ON!");
+                localBroadcastManager.sendBroadcast(intentWiFi);
+            } else {
+                Log.e("Hello", "Disconnected");
+                intentWiFi.putExtra("MY_ACTION", "OFF!");
+                localBroadcastManager.sendBroadcast(intentWiFi);
+            }
         }
     };
 
@@ -49,6 +51,7 @@ public class MyService extends Service {
     public void onCreate() {
         super.onCreate();
         Log.e("HI!", "onCreate");
+        //Toast.makeText().....
     }
 
     @Nullable
@@ -67,7 +70,6 @@ public class MyService extends Service {
         Log.e("HI!", "onUnbind");
         unregisterReceiver(receiver);
         return super.onUnbind(intent);
-
     }
 
 

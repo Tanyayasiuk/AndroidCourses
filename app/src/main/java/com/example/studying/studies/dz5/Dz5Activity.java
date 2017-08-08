@@ -40,10 +40,9 @@ public class Dz5Activity extends Activity{
         bindService(intent, serviceConnection, Context.BIND_AUTO_CREATE);
 
         IntentFilter intentFilter = new IntentFilter();
-        intentFilter.addAction(MyService.MY_ACTION);
+        //intentFilter.addAction(MyService.MY_ACTION);
         intentFilter.addAction(MyService.WIFI_ACTION);
         localBroadcastManager.registerReceiver(receiver, intentFilter);
-
     }
 
     @Override
@@ -69,13 +68,20 @@ public class Dz5Activity extends Activity{
         @Override
         public void onReceive(Context context, Intent intent) {
 
-            WifiManager wifi = (WifiManager)context.getApplicationContext().getSystemService(Context.WIFI_SERVICE);
+            String text = intent.getStringExtra("MY_ACTION");
+          /*  WifiManager wifi = (WifiManager)context.getApplicationContext().getSystemService(Context.WIFI_SERVICE);
             if (wifi.isWifiEnabled()){
                 textView.setText(R.string.dz5On);
             } else
-                textView.setText(R.string.dz5Off);
-
+                textView.setText(R.string.dz5Off);*/
+            textView.setText(text);
 
         }
     };
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.left_in, R.anim.right_out);
+    }
 }
