@@ -5,12 +5,8 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.ProgressBar;
+import android.util.Log;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.RequestOptions;
 import com.example.studying.studies.R;
 
 import java.util.ArrayList;
@@ -20,7 +16,6 @@ public class Dz6Activity extends Activity {
     private RecyclerView recyclerView;
     private ArrayList<String> urls = new ArrayList<>();
     private ArrayList<String> countries = new ArrayList<>();
-    ProgressBar bar;
 
 
     @Override
@@ -70,7 +65,18 @@ public class Dz6Activity extends Activity {
         MyAdapter myAdapter = new MyAdapter(this, urls, countries);
         recyclerView.setAdapter(myAdapter);
 
+        myAdapter.setListener(new MyAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(String item) {
+                Log.e("GGG", "OnitemClick " + item);
+            }
+        });
+    }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.left_in, R.anim.right_out);
     }
 
 }

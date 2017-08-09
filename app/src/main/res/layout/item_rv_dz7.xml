@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <import type = "android.view.View"/>
+        <variable
+            name="user"
+            type="com.example.studying.studies.dz7_1.User"/>
+        <variable
+            name="adapter"
+            type="com.example.studying.studies.dz7_1.RecyclerViewAdapter"/>
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="@dimen/dz6_start_end_padding"
+        android:layout_marginStart="@dimen/dz6_start_end_padding"
+        android:layout_marginEnd="@dimen/dz6_start_end_padding"
+        android:layout_marginRight="@dimen/dz6_start_end_padding"
+        android:background="@{user.sex == 'm' ? @color/male : @color/female}">
+
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="5dip"
+                android:layout_marginStart="5dip"
+                android:layout_gravity="center"
+                android:indeterminateDrawable="@drawable/progress_bar"
+                android:indeterminateOnly="true" />
+            <ImageView
+                android:id="@+id/userImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="3dp"
+                android:layout_marginStart="3dp"
+                android:src="@{user.imageUrl}"
+                android:contentDescription="@string/hello_string" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginStart="@dimen/dz7_padding"
+            android:layout_marginLeft="@dimen/dz7_padding">
+
+            <TextView
+                android:id="@+id/lastName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/lastName_textSize"
+                android:textAllCaps="true"
+                android:text="@{user.lasName}"/>
+
+            <TextView
+                android:id="@+id/firstName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/firstName_textSize"
+                android:text="@{user.firstName}"/>
+            <TextView
+                android:id="@+id/age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/otherInfo_textSize"
+                android:text="@{user.age}"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

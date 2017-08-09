@@ -1,55 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<LinearLayout android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/mainBackground">
+    android:orientation="vertical"
+    android:background="@color/someBackground"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <Button
-        android:id="@+id/dz1Button"
+    <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="DZ-1" />
+        android:layout_gravity="center_horizontal"
+        android:background="@color/someBackground"
+        android:columnCount="4"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/dz6_start_end_padding">
 
-    <Button
-        android:id="@+id/dz2Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="DZ-2"
-        />
+        <Button
+            android:id="@+id/dz1Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/otherInfo_textSize"
+            android:text="DZ-1" />
 
-    <Button
-        android:id="@+id/dz3Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="DZ-3"
-        />
+        <Button
+            android:id="@+id/dz2Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/otherInfo_textSize"
+            android:text="DZ-2" />
 
-    <Button
-        android:id="@+id/dz4Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="DZ-4"
-        />
+        <Button
+            android:id="@+id/dz3Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/otherInfo_textSize"
+            android:text="DZ-3" />
 
-    <Button
-        android:id="@+id/dz5Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="DZ-5"
-        />
+        <Button
+            android:id="@+id/dz4Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/otherInfo_textSize"
+            android:text="DZ-4" />
 
-    <Button
-        android:id="@+id/dz6Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="DZ-6"
-        />
+        <Button
+            android:id="@+id/dz5Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/otherInfo_textSize"
+            android:text="DZ-5" />
 
+        <Button
+            android:id="@+id/dz6Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/otherInfo_textSize"
+            android:text="DZ-6" />
+
+        <Button
+            android:id="@+id/dz7Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/otherInfo_textSize"
+            android:text="DZ-7" />
+
+        <Button
+            android:id="@+id/dz8Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/otherInfo_textSize"
+            android:text="DZ-7/1" />
+
+    </GridLayout>
 </LinearLayout>

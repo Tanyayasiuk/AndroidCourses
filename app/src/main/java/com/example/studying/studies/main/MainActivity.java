@@ -13,8 +13,9 @@ import com.example.studying.studies.dz3.Dz3Activity;
 import com.example.studying.studies.dz4.Dz4Activity;
 import com.example.studying.studies.dz5.Dz5Activity;
 import com.example.studying.studies.dz6.Dz6Activity;
+import com.example.studying.studies.dz7.Dz7Activity;
+import com.example.studying.studies.dz7_1.Dz7_1Activity;
 import com.example.studying.studies.lesson2.Lesson2Activity;
-import com.example.studying.studies.lesson6.Lesson6Activity;
 
 public class MainActivity extends Activity {
 
@@ -74,7 +75,6 @@ public class MainActivity extends Activity {
 
                 Intent intent = new Intent(MainActivity.this, Dz5Activity.class);
                 startActivity(intent);
-                //Задает анимацию смены активити
                 overridePendingTransition(R.anim.right_in, R.anim.left_out);
             }
         });
@@ -86,7 +86,28 @@ public class MainActivity extends Activity {
 
                 Intent intent = new Intent(MainActivity.this, Dz6Activity.class);
                 startActivity(intent);
-                //Задает анимацию смены активити
+                overridePendingTransition(R.anim.right_in, R.anim.left_out);
+            }
+        });
+
+        Button dz7Button = findViewById(R.id.dz7Button);
+        dz7Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(MainActivity.this, Dz7Activity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.right_in, R.anim.left_out);
+            }
+        });
+
+        Button dz8Button = findViewById(R.id.dz8Button);
+        dz8Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(MainActivity.this, Dz7_1Activity.class);
+                startActivity(intent);
                 overridePendingTransition(R.anim.right_in, R.anim.left_out);
             }
         });

@@ -3,9 +3,14 @@
     <dimen name="lesson2_start_end_padding">20dp</dimen>
     <dimen name="dz2_start_end_padding">20dp</dimen>
     <dimen name="dz4_start_end_padding">30dp</dimen>
-    <dimen name="text_size">34dp</dimen>
+    <dimen name="text_size">34sp</dimen>
     <dimen name="button_text_size">20dp</dimen>
                  <!--dz6 dimensions-->
     <dimen name="dz6_start_end_padding">10dp</dimen>
     <dimen name="country_text_size">15sp</dimen>
+                    <!--DZ7-->
+    <dimen name="lastName_textSize">28sp</dimen>
+    <dimen name="firstName_textSize">26sp</dimen>
+    <dimen name="otherInfo_textSize">20sp</dimen>
+    <dimen name="dz7_padding">13dp</dimen>
 </resources>
