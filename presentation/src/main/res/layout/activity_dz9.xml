@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout >
+    <data>
+        <import type = "android.view.View"/>
+        <variable
+            name="activity"
+            type="com.example.studying.studies.dz9.Dz9Activity"/>
+        <variable
+            name="viewModel"
+            type="com.example.studying.studies.dz9.Dz9ViewModel"/>
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/mainBackground">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_dz9"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+</layout>
