@@ -1,25 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
         <import type = "android.view.View"/>
         <import type="java.lang.String"/>
         <variable
-            name="viewModel"
-            type="com.example.studying.studies.dz9.Dz9ViewModel"/>
-        <variable
-            name="adapter"
-            type="com.example.studying.studies.dz9.RVAdapter"/>
+            name="item"
+            type="com.example.studying.studies.dz9.ItemViewModel"/>
     </data>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:layout_marginBottom="12dp"
         android:layout_marginLeft="@dimen/dz6_start_end_padding"
         android:layout_marginStart="@dimen/dz6_start_end_padding"
         android:layout_marginEnd="@dimen/dz6_start_end_padding"
-        android:layout_marginRight="@dimen/dz6_start_end_padding">
+        android:layout_marginRight="@dimen/dz6_start_end_padding"
+        android:background="@color/item_background">
 
 
         <FrameLayout
@@ -33,34 +31,26 @@
                 android:layout_marginStart="5dip"
                 android:layout_gravity="center"
                 android:indeterminateDrawable="@drawable/progress_bar"
-                android:indeterminateOnly="true" />
+                android:indeterminateOnly="true"/>
             <ImageView
                 android:id="@+id/userImage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:layout_gravity="center"
                 android:layout_marginLeft="3dp"
                 android:layout_marginStart="3dp"
-                android:src="@{viewModel.imageUrl}"
-                android:contentDescription="@string/hello_string" />
+                app:src="@{item.url}"/>
         </FrameLayout>
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/lastName"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_marginStart="@dimen/dz7_padding"
-            android:layout_marginLeft="@dimen/dz7_padding">
-
-            <TextView
-                android:id="@+id/lastName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/lastName_textSize"
-                android:textAllCaps="true"
-                android:text="@{viewModel.countryName}"/>
-
-        </LinearLayout>
+            android:layout_height="wrap_content"
+            android:text="@{item.name}"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:gravity="center_vertical|center_horizontal"
+            android:textSize="@dimen/country_text_size"
+            android:textColor="@color/colorPrimaryDark"/>
 
     </LinearLayout>
 </layout>

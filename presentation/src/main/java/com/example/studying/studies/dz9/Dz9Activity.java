@@ -35,13 +35,6 @@ public class Dz9Activity extends BaseActivity {
         binding.setViewModel(viewModel);
         super.onCreate(savedInstanceState);
 
-        recyclerView = (RecyclerView)findViewById(R.id.rv_dz9);
-        LinearLayoutManager gridLayoutManager = new LinearLayoutManager(Dz9Activity.this);
-        recyclerView.setLayoutManager(gridLayoutManager);
-
-        RVAdapter myAdapter = new RVAdapter(this);
-        recyclerView.setAdapter(myAdapter);
-        Log.e("DDDDDDD", "onCreateDZ9Activity");
     }
 
     @Override

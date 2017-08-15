@@ -1,6 +1,6 @@
 package com.example.studying.domain.entity;
 
-public class Profile {
+public class ProfileModel implements DomainModel{
 
     private String firstName;
     private String lastName;

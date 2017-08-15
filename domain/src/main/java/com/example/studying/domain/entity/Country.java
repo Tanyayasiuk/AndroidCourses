@@ -1,34 +1,28 @@
 package com.example.studying.domain.entity;
 
-import android.widget.ImageView;
+public class Country implements DomainModel {
 
-public class Country {
+    private String name;
+    private String url;
 
-    private String countryName;
-    private String imageUrl;
-
-    private ImageView view;
-
-    /*public Country(String countryName, String imageUrl) {
-        this.countryName = countryName;
-        this.imageUrl = imageUrl;
-    }*/
-
-    public String getCountryName() {
-        return countryName;
+    public Country(String name, String url) {
+        this.name = name;
+        this.url = url;
     }
 
-    public void setCountryName(String countryName) {
-        this.countryName = countryName;
+    public String getName() {
+        return name;
     }
 
-    public String getImageUrl() {
-        return imageUrl;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
+    public String getUrl() {
+        return url;
     }
 
-
+    public void setUrl(String url) {
+        this.url = url;
+    }
 }

@@ -43,6 +43,7 @@
         android:layout_marginStart="5dp"
         android:gravity="center_vertical|center_horizontal"
         android:textSize="@dimen/country_text_size"
+        android:textColor="@color/textColor"
         tools:text="Some country name" />
 
 </LinearLayout>

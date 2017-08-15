@@ -123,7 +123,9 @@ public class MainActivity extends Activity {
                 //Intent intent = new Intent(MainActivity.this, Lesson9Activity.class);
 /*                startActivity(intent);
                 */
-                Dz9Activity.show(MainActivity.this);
+               /* Lesson9Activity.show(MainActivity.this);*/
+                Intent intent = new Intent(MainActivity.this, Dz9Activity.class);
+                startActivity(intent);
                 overridePendingTransition(R.anim.right_in, R.anim.left_out);
             }
         });
