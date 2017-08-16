@@ -48,7 +48,7 @@ public class Lesson9ViewModel implements BaseViewModel {
     public void resume() {
         ProfileId profileId = new ProfileId();
         profileId.setId("123");
-        ProfileModel profile = useCase.execute(profileId); // lesson9
+        //ProfileModel profile = useCase.execute(profileId); // lesson9
         /*useCase.execute(profileId, new DisposableObserver<ProfileModel>() {
             // по сути подписка на получение информации
             @Override
@@ -71,10 +71,10 @@ public class Lesson9ViewModel implements BaseViewModel {
         });*/
 
 //lesson9
-        firstName.set(profile.getFirstName());
+       /* firstName.set(profile.getFirstName());
         lastName.set(profile.getLastName());
         age.set(profile.getAge());
-        state.set(STATE.DATA);
+        state.set(STATE.DATA);*/
 
     }
 

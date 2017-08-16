@@ -3,9 +3,11 @@ package com.example.studying.domain.interacton;
 import com.example.studying.domain.entity.Country;
 import com.example.studying.domain.interacton.Base.UseCase;
 
+import io.reactivex.Observable;
+
 
 public class CountryUseCase extends UseCase<Void, Country[]>{
-    @Override
+    //@Override
     protected Country[] buildUseCase() {
         Country[] countries = new Country[]{
                 new Country("Australia", "http://ru.freeflagicons.com/download/?series=round_icon&country=australia&size=64"),
@@ -28,4 +30,8 @@ public class CountryUseCase extends UseCase<Void, Country[]>{
         return countries;
     }
 
+    @Override
+    protected Observable<Country[]> buildUseCase(Void aVoid) {
+        return null;
+    }
 }

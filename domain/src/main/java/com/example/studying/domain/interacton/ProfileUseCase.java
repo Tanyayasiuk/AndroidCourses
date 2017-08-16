@@ -13,8 +13,29 @@ import io.reactivex.functions.Function;
 import io.reactivex.functions.Predicate;
 
 public class ProfileUseCase extends UseCase<ProfileId, ProfileModel> {
+    @Override
+    protected Observable<ProfileModel> buildUseCase(ProfileId profileId) {
+        Profile profile = new Profile();
+        profile.setAge(20);
+        profile.setFirstName("Ivan");
+        profile.setLastName("Ivanov");
 
- //lesson9 variant
+
+        return Observable.just(profile)
+                .delay(3, TimeUnit.SECONDS)
+                .map(new Function<Profile, ProfileModel>() {
+                    @Override
+                    public ProfileModel apply(@NonNull Profile profile) throws Exception {
+                        ProfileModel profileModel = new ProfileModel();
+                        profileModel.setFirstName(profile.getFirstName());
+                        profileModel.setLastName(profile.getLastName());
+                        profileModel.setAge(profile.getAge());
+                        return profileModel;
+                    }
+                });
+    }
+
+    //lesson9 variant
    /*@Override
     protected ProfileModel buildUseCase() {
         return null;
@@ -22,7 +43,7 @@ public class ProfileUseCase extends UseCase<ProfileId, ProfileModel> {
 */
 
  //lesson9 variant
-    @Override
+   /* @Override
     protected ProfileModel buildUseCase() {
 
         ProfileModel profile = new ProfileModel();
@@ -30,7 +51,7 @@ public class ProfileUseCase extends UseCase<ProfileId, ProfileModel> {
         profile.setFirstName("Ivan");
         profile.setLastName("Ivanov");
         return profile;
-    }
+    }*/
 
 
    /* @Override

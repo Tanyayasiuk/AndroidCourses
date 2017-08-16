@@ -38,14 +38,14 @@ public class Dz9ViewModel implements BaseViewModel {
         GridLayoutManager gridLayoutManager = new GridLayoutManager(activity, 2);
         recyclerView.setLayoutManager(gridLayoutManager);
 
-        countries = useCase.execute(null);
+        /*countries = useCase.execute(null);
         items = new ItemViewModel[countries.length];
         for (int i=0; i<countries.length; i++) {
             String picture = countries[i].getUrl();
             String name = countries[i].getName();
             items[i] = new ItemViewModel(name, picture);
         }
-
+*/
         RVAdapter myAdapter = new RVAdapter(recyclerView.getContext(), items);
         recyclerView.setAdapter(myAdapter);
     }
