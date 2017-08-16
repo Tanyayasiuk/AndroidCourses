@@ -56,6 +56,7 @@
         <activity android:name=".lesson8.Lesson8Activity"/>
         <activity android:name=".lesson9.Lesson9Activity"/>
         <activity android:name=".dz9.Dz9Activity"/>
+        <activity android:name=".dz10.Dz10Activity"/>
 
     </application>
 

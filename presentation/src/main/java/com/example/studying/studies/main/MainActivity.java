@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.studying.studies.R;
+import com.example.studying.studies.dz10.Dz10Activity;
 import com.example.studying.studies.dz2.Dz2Activity;
 import com.example.studying.studies.dz3.Dz3Activity;
 import com.example.studying.studies.dz4.Dz4Activity;
@@ -125,6 +126,17 @@ public class MainActivity extends Activity {
                 */
                /* Lesson9Activity.show(MainActivity.this);*/
                 Intent intent = new Intent(MainActivity.this, Dz9Activity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.right_in, R.anim.left_out);
+            }
+        });
+
+        Button dz10Button = findViewById(R.id.dz10Button);
+        dz10Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(MainActivity.this, Dz10Activity.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.right_in, R.anim.left_out);
             }

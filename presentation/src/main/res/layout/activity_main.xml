@@ -95,5 +95,14 @@
             android:textSize="@dimen/otherInfo_textSize"
             android:text="DZ-9" />
 
+        <Button
+            android:id="@+id/dz10Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/otherInfo_textSize"
+            android:text="DZ-10" />
+
     </GridLayout>
 </LinearLayout>

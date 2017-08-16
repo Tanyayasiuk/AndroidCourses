@@ -50,7 +50,7 @@ public class ProfileUseCase extends UseCase<ProfileId, ProfileModel> {
 
         //return Observable.just(profile).delay(3, TimeUnit.SECONDS); //метод just просто создает нам Observable profile
         //нужно трансформировать профайл из даты в профайлмодель домэйна
-        //для этого есть метож мап
+        //для этого есть метод мап
         return Observable.just(profile)
                 .delay(3, TimeUnit.SECONDS)
 .filter(new Predicate<Profile>() {

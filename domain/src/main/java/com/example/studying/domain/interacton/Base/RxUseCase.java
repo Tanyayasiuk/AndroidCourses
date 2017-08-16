@@ -6,15 +6,10 @@ import io.reactivex.disposables.Disposable;
 import io.reactivex.observers.DisposableObserver;
 import io.reactivex.schedulers.Schedulers;
 
-public abstract class UseCase<InParam, OutParam> {
 
-   protected abstract OutParam buildUseCase(); //lesson9 variant
+public abstract class RxUseCase<InParam, OutParam> {
 
-    //lesson9 variant
-   public OutParam execute(InParam param) {
-        return buildUseCase();
-    }
-   /*private Disposable disposable;
+    private Disposable disposable;
 
    protected abstract Observable<OutParam> buildUseCase();
 
@@ -31,6 +26,6 @@ public abstract class UseCase<InParam, OutParam> {
        if (!disposable.isDisposed()){
            disposable.dispose();
        }
-   }*/
+   }
 
 }
