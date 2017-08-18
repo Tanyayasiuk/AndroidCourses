@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <import type="java.lang.String"/>
+        <variable
+            name="editItem"
+            type="com.example.studying.studies.dz11.EditProfileViewModel"/>
+    </data>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/item_background">
+
+        <TextView
+            android:id="@+id/edit_surname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:textSize="@dimen/lastName_textSize"
+            android:hint="Surname"
+            android:text="@{editItem.lastName}"/>
+        <TextView
+            android:id="@+id/edit_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:textSize="@dimen/firstName_textSize"
+            android:hint="Name"
+            android:text="@{editItem.firstName}"/>
+        <TextView
+            android:id="@+id/edit_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:text="@{String.valueOf(editItem.age)}"/>
+        <Button
+            android:id="@+id/editButton"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:text="Edit"/>
+    </LinearLayout>
+</layout>

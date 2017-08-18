@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <import type="android.view.View"/>
+        <import type="com.example.studying.studies.dz11.Dz11ViewModel.STATE"/>
+        <variable
+            name="viewModel"
+            type="com.example.studying.studies.dz11.Dz11ViewModel"/>
+    </data>
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backColor">
+
+        <ProgressBar
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:visibility="@{viewModel.state == STATE.DATA ? View.GONE : View.VISIBLE}"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_dz11"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </android.support.v7.widget.RecyclerView>
+
+    </FrameLayout>
+</layout>

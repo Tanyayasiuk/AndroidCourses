@@ -1,10 +1,12 @@
 package com.example.studying.domain.interacton;
 
 import com.example.studying.data.entity.Profile;
+import com.example.studying.data.net.RestService;
 import com.example.studying.domain.entity.ProfileModel;
 import com.example.studying.domain.entity.ProfileId;
 import com.example.studying.domain.interacton.Base.UseCase;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import io.reactivex.Observable;
@@ -13,7 +15,27 @@ import io.reactivex.functions.Function;
 import io.reactivex.functions.Predicate;
 
 public class ProfileUseCase extends UseCase<ProfileId, ProfileModel> {
+
     @Override
+    protected Observable<ProfileModel> buildUseCase(ProfileId profileId) {
+        return RestService.getInstance().getProfiles()
+                .map(new Function<List<Profile>, ProfileModel>() {
+                    @Override
+                    public ProfileModel apply(@NonNull List<Profile> profiles) throws Exception {
+                        Profile profileData = profiles.get(0);
+                        ProfileModel profileModel = new ProfileModel();
+                        profileModel.setFirstName(profileData.getFirstName());
+                        profileModel.setLastName(profileData.getLastName());
+                        profileModel.setAge(profileData.getAge());
+
+                        return profileModel;
+                    }
+                });
+    }
+
+
+
+   /*@Override
     protected Observable<ProfileModel> buildUseCase(ProfileId profileId) {
         Profile profile = new Profile();
         profile.setAge(20);
@@ -34,7 +56,7 @@ public class ProfileUseCase extends UseCase<ProfileId, ProfileModel> {
                     }
                 });
     }
-
+*/
     //lesson9 variant
    /*@Override
     protected ProfileModel buildUseCase() {

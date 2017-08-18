@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <import type="android.view.View"/>
+        <import type="java.lang.String"/>
+
+        <variable
+            name="item"
+            type="com.example.studying.studies.dz11.ItemViewModel"/>
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dz9_padding"
+        android:layout_marginBottom="@dimen/dz9_padding"
+        android:background="@color/item_background">
+
+        <TextView
+            android:id="@+id/surname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{item.surname}"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:gravity="center_vertical|center_horizontal"
+            android:textSize="@dimen/lastName_textSize"
+            android:textColor="@color/colorPrimaryDark"/>
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{item.name}"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:gravity="center_vertical|center_horizontal"
+            android:textSize="@dimen/firstName_textSize"
+            android:textColor="@color/colorPrimaryDark"/>
+        <TextView
+            android:id="@+id/age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{String.valueOf(item.age)}"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:gravity="center_vertical|center_horizontal"
+            android:textSize="@dimen/otherInfo_textSize"
+            android:textColor="@color/colorPrimaryDark"/>
+    </LinearLayout>
+</layout>

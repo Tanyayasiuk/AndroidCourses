@@ -18,8 +18,6 @@ import com.example.studying.studies.databinding.ActivityDz9Binding;
 
 public class Dz9Activity extends BaseActivity {
 
-    private Country country;
-    private RecyclerView recyclerView;
 
     public static void show(Activity activity){
         Intent intent = new Intent(activity, Dz9Activity.class);

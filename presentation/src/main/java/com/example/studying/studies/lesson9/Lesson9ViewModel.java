@@ -8,6 +8,7 @@ import android.util.Log;
 import com.example.studying.domain.entity.ProfileModel;
 import com.example.studying.domain.entity.ProfileId;
 import com.example.studying.domain.interacton.ProfileUseCase;
+import com.example.studying.domain.interacton.SaveProfileUseCase;
 import com.example.studying.studies.base.BaseViewModel;
 
 import io.reactivex.annotations.NonNull;
@@ -32,6 +33,7 @@ public class Lesson9ViewModel implements BaseViewModel {
     public ObservableField<STATE> state = new ObservableField<>(STATE.PROGRESS);
     public ObservableInt age = new ObservableInt(0);
     private ProfileUseCase useCase = new ProfileUseCase();
+    private SaveProfileUseCase saveProfileUseCase = new SaveProfileUseCase();
 
     public Lesson9ViewModel(Activity activity){
         this.activity = activity;
@@ -46,10 +48,32 @@ public class Lesson9ViewModel implements BaseViewModel {
 
     @Override
     public void resume() {
+
+        ProfileModel profileModel = new ProfileModel();
+        profileModel.setAge(18);
+        profileModel.setLastName("SomeSurname");
+        profileModel.setFirstName("SomeName");
+        saveProfileUseCase.execute(profileModel, new DisposableObserver<Void>() {
+            @Override
+            public void onNext(@NonNull Void aVoid) {
+                Log.e("AAAAAA", "OK!");
+            }
+
+            @Override
+            public void onError(@NonNull Throwable e) {
+                Log.e("AAAAAA", "error = ", e);
+            }
+
+            @Override
+            public void onComplete() {
+
+            }
+        });
+
         ProfileId profileId = new ProfileId();
         profileId.setId("123");
         //ProfileModel profile = useCase.execute(profileId); // lesson9
-        /*useCase.execute(profileId, new DisposableObserver<ProfileModel>() {
+        useCase.execute(profileId, new DisposableObserver<ProfileModel>() {
             // по сути подписка на получение информации
             @Override
             public void onNext(@NonNull ProfileModel profile) {
@@ -68,7 +92,7 @@ public class Lesson9ViewModel implements BaseViewModel {
             public void onComplete() {
 
             }
-        });*/
+        });
 
 //lesson9
        /* firstName.set(profile.getFirstName());
@@ -81,5 +105,6 @@ public class Lesson9ViewModel implements BaseViewModel {
     @Override
     public void pause() {
         /*useCase.dispose();*/
+        saveProfileUseCase.dispose();
     }
 }

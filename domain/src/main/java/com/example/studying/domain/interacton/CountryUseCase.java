@@ -1,12 +1,13 @@
 package com.example.studying.domain.interacton;
 
 import com.example.studying.domain.entity.Country;
+import com.example.studying.domain.interacton.Base.CUseCase;
 import com.example.studying.domain.interacton.Base.UseCase;
 
 import io.reactivex.Observable;
 
 
-public class CountryUseCase extends UseCase<Void, Country[]>{
+public class CountryUseCase extends CUseCase<Void, Country[]> {
     //@Override
     protected Country[] buildUseCase() {
         Country[] countries = new Country[]{
@@ -30,8 +31,8 @@ public class CountryUseCase extends UseCase<Void, Country[]>{
         return countries;
     }
 
-    @Override
+    /*@Override
     protected Observable<Country[]> buildUseCase(Void aVoid) {
         return null;
-    }
+    }*/
 }

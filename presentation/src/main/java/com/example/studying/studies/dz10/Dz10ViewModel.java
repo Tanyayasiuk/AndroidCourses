@@ -34,7 +34,6 @@ public class Dz10ViewModel implements BaseViewModel {
             @Override
             public void onNext(@NonNull Long aLong) {
                 name.set(String.valueOf(aLong));
-                //longTime = aLong;
                 Log.e("AAAAAA", String.valueOf(aLong));
             }
 

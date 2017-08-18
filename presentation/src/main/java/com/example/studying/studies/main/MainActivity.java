@@ -9,6 +9,7 @@ import android.widget.Button;
 
 import com.example.studying.studies.R;
 import com.example.studying.studies.dz10.Dz10Activity;
+import com.example.studying.studies.dz11.Dz11Activity;
 import com.example.studying.studies.dz2.Dz2Activity;
 import com.example.studying.studies.dz3.Dz3Activity;
 import com.example.studying.studies.dz4.Dz4Activity;
@@ -17,6 +18,7 @@ import com.example.studying.studies.dz6.Dz6Activity;
 import com.example.studying.studies.dz7.Dz7Activity;
 import com.example.studying.studies.dz7_1.Dz7_1Activity;
 import com.example.studying.studies.dz9.Dz9Activity;
+import com.example.studying.studies.lesson12.Lesson12Activity;
 import com.example.studying.studies.lesson2.Lesson2Activity;
 import com.example.studying.studies.lesson8.Lesson8Activity;
 import com.example.studying.studies.lesson9.Lesson9Activity;
@@ -131,12 +133,49 @@ public class MainActivity extends Activity {
             }
         });
 
+        Button l9Button = findViewById(R.id.l9Button);
+        l9Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                //Intent intent = new Intent(MainActivity.this, Lesson9Activity.class);
+/*                startActivity(intent);
+                */
+               /* Lesson9Activity.show(MainActivity.this);*/
+                Intent intent = new Intent(MainActivity.this, Lesson9Activity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.right_in, R.anim.left_out);
+            }
+        });
+
         Button dz10Button = findViewById(R.id.dz10Button);
         dz10Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 Intent intent = new Intent(MainActivity.this, Dz10Activity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.right_in, R.anim.left_out);
+            }
+        });
+
+        Button dz11Button = findViewById(R.id.dz11Button);
+        dz11Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(MainActivity.this, Dz11Activity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.right_in, R.anim.left_out);
+            }
+        });
+
+        Button l12Button = findViewById(R.id.l12Button);
+        l12Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(MainActivity.this, Lesson12Activity.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.right_in, R.anim.left_out);
             }
