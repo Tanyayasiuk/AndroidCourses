@@ -47,6 +47,7 @@ public class Dz11Adapter extends RecyclerView.Adapter<Dz11Adapter.Holder> {
                 Intent intent = new Intent(context, EditProfileActivity.class);
                 intent.putExtra("ID", id);
                 context.startActivity(intent);
+
             }
         });
     }

@@ -1,10 +1,14 @@
 package com.example.studying.studies.dz11;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.databinding.ObservableField;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 import com.example.studying.domain.entity.ProfileModel;
 import com.example.studying.domain.interacton.ProfilesListUseCase;
@@ -44,6 +48,14 @@ public class Dz11ViewModel implements BaseViewModel {
         LinearLayoutManager manager = new LinearLayoutManager(activity);
         recyclerView.setLayoutManager(manager);
 
+        FloatingActionButton fab = (FloatingActionButton) activity.findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                activity.startActivity(new Intent(activity, AddProfileActivity.class));
+            }
+        });
+
         useCase.execute(null, new DisposableObserver<List<ProfileModel>>() {
             @Override
             public void onNext(@NonNull List<ProfileModel> profileModels) {
@@ -76,4 +88,8 @@ public class Dz11ViewModel implements BaseViewModel {
     public void pause() {
         useCase.dispose();
     }
+
+
+
+
 }

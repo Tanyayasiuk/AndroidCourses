@@ -19,6 +19,7 @@ import com.example.studying.studies.dz7.Dz7Activity;
 import com.example.studying.studies.dz7_1.Dz7_1Activity;
 import com.example.studying.studies.dz9.Dz9Activity;
 import com.example.studying.studies.lesson12.Lesson12Activity;
+import com.example.studying.studies.lesson13.Lesson13Activity;
 import com.example.studying.studies.lesson2.Lesson2Activity;
 import com.example.studying.studies.lesson8.Lesson8Activity;
 import com.example.studying.studies.lesson9.Lesson9Activity;
@@ -176,6 +177,17 @@ public class MainActivity extends Activity {
             public void onClick(View view) {
 
                 Intent intent = new Intent(MainActivity.this, Lesson12Activity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.right_in, R.anim.left_out);
+            }
+        });
+
+        Button l13Button = findViewById(R.id.l13Button);
+        l13Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(MainActivity.this, Lesson13Activity.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.right_in, R.anim.left_out);
             }

@@ -27,6 +27,7 @@ public class GetProfileUseCase extends UseCase<String, ProfileModel> {
                         profileModel.setFirstName(profile.getFirstName());
                         profileModel.setLastName(profile.getLastName());
                         profileModel.setAge(profile.getAge());
+                        profileModel.setId(profile.getId());
                         Log.e("AAAA", "Model: " + profileModel.getLastName());
                         return profileModel;
                     }

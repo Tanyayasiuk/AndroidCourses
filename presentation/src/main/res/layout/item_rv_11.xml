@@ -13,9 +13,12 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dz9_padding"
-        android:layout_marginBottom="@dimen/dz9_padding"
-        android:background="@color/item_background">
+        android:layout_marginBottom="@dimen/rv_line"
+        android:layout_marginLeft="@dimen/rv_sides"
+        android:layout_marginStart="@dimen/rv_sides"
+        android:layout_marginEnd="@dimen/rv_sides"
+        android:layout_marginRight="@dimen/rv_sides"
+        android:background="@color/material_background">
 
         <TextView
             android:id="@+id/surname"
@@ -25,7 +28,7 @@
             android:layout_gravity="center_vertical|center_horizontal"
             android:gravity="center_vertical|center_horizontal"
             android:textSize="@dimen/lastName_textSize"
-            android:textColor="@color/colorPrimaryDark"/>
+            android:textColor="@color/secondary_text"/>
         <TextView
             android:id="@+id/name"
             android:layout_width="wrap_content"
@@ -34,7 +37,7 @@
             android:layout_gravity="center_vertical|center_horizontal"
             android:gravity="center_vertical|center_horizontal"
             android:textSize="@dimen/firstName_textSize"
-            android:textColor="@color/colorPrimaryDark"/>
+            android:textColor="@color/secondary_text"/>
         <TextView
             android:id="@+id/age"
             android:layout_width="wrap_content"
@@ -43,6 +46,6 @@
             android:layout_gravity="center_vertical|center_horizontal"
             android:gravity="center_vertical|center_horizontal"
             android:textSize="@dimen/otherInfo_textSize"
-            android:textColor="@color/colorPrimaryDark"/>
+            android:textColor="@color/secondary_text"/>
     </LinearLayout>
 </layout>

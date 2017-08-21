@@ -34,7 +34,7 @@ public class Dz10ViewModel implements BaseViewModel {
             @Override
             public void onNext(@NonNull Long aLong) {
                 name.set(String.valueOf(aLong));
-                Log.e("AAAAAA", String.valueOf(aLong));
+                Log.e("AAA", String.valueOf(aLong));
             }
 
             @Override
@@ -53,6 +53,6 @@ public class Dz10ViewModel implements BaseViewModel {
     @Override
     public void pause() {
         useCase.dispose();
-        Log.e("AAAAAA" , "DISPOSE");
+        Log.e("AAA" , "DISPOSE");
     }
 }

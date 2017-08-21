@@ -25,6 +25,15 @@
     <string name="appwidget_text">EXAMPLE</string>
     <string name="add_widget">Add widget</string>
     <string name="dz6_flag">flag</string>
+    <string name="edit_profile">Edit profile</string>
+    <string name="edit_button">EDIT</string>
+    <string name="add_button">ADD</string>
+    <string name="profiles_list">Profiles</string>
+    <string name="hint_profile">Type in and press "Edit"</string>
+    <string name="hint_surname">surname</string>
+    <string name="hint_name">name</string>
+    <string name="hint_age">age</string>
+    <string name="new_profile">New profile</string>
 
 
 </resources>

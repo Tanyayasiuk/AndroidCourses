@@ -1,36 +1,31 @@
 package com.example.studying.studies.dz11;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
-import android.view.View;
 
 import com.example.studying.studies.R;
 import com.example.studying.studies.base.BaseActivity;
-import com.example.studying.studies.databinding.ActivityEditVmBinding;
+import com.example.studying.studies.databinding.ActivityAddProfileBinding;
 
-public class EditProfileActivity extends BaseActivity {
 
+public class AddProfileActivity extends BaseActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
 
-        Bundle extras = getIntent().getExtras();
-        String id = extras.getString("ID");
+        AddProfileViewModel addProfileViewModel = new AddProfileViewModel(this);
+        this.viewModel = addProfileViewModel;
 
-        EditProfileViewModel viewModel = new EditProfileViewModel(this, id);
-        this.viewModel = viewModel;
-
-        ActivityEditVmBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_edit_vm);
-        binding.setEditItem(viewModel);
+        ActivityAddProfileBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_add_profile);
+        binding.setAddView(addProfileViewModel);
         super.onCreate(savedInstanceState);
-
     }
 
     @Override
     protected void onPause() {
+        Log.e("CCC", "onPAUSE");
         super.onPause();
     }
 
@@ -38,6 +33,7 @@ public class EditProfileActivity extends BaseActivity {
     public void onBackPressed() {
         super.onBackPressed();
         overridePendingTransition(R.anim.left_in, R.anim.right_out);
+        Log.e("CCC", "Starting main activity");
         startActivity(new Intent(this, Dz11Activity.class));
     }
 

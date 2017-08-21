@@ -1,5 +1,7 @@
 package com.example.studying.domain.interacton.Base;
 
+import android.util.Log;
+
 import io.reactivex.Observable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
@@ -24,6 +26,7 @@ public abstract class UseCase<InParam, OutParam> {
 
     public void dispose(){
         if (!disposable.isDisposed()){
+            Log.e("CCC", "Disposing");
             disposable.dispose();
         }
     }

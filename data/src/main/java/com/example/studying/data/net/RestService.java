@@ -10,7 +10,6 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import io.reactivex.Observable;
-import io.reactivex.functions.Function;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
@@ -48,9 +47,8 @@ public class RestService {
                 .client(okHttpClient)
                 .build();
 
-        Log.e("AAAAAA", "RETROFIT");
+        Log.e("AAA", "RETROFIT");
         restAPI = retrofit.create(RestAPI.class);
-
     }
 
     public Observable<List<Profile>> getProfiles(){
@@ -63,4 +61,12 @@ public class RestService {
 
     public Observable<Profile> getProfile(String id){
         return restAPI.getProfile(id);}
+
+    public Observable<Void> setProfile(String id, Profile profile){
+        return restAPI.setProfile(id, profile);
+    }
+
+    public Observable<Void> addProfile(Profile profile){
+        return restAPI.addProfile(profile);
+    }
 }
