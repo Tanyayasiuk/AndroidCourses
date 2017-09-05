@@ -10,6 +10,7 @@ import android.widget.Button;
 import com.example.studying.studies.R;
 import com.example.studying.studies.dz10.Dz10Activity;
 import com.example.studying.studies.dz11.Dz11Activity;
+import com.example.studying.studies.dz14.Dz14Activity;
 import com.example.studying.studies.dz2.Dz2Activity;
 import com.example.studying.studies.dz3.Dz3Activity;
 import com.example.studying.studies.dz4.Dz4Activity;
@@ -20,6 +21,7 @@ import com.example.studying.studies.dz7_1.Dz7_1Activity;
 import com.example.studying.studies.dz9.Dz9Activity;
 import com.example.studying.studies.lesson12.Lesson12Activity;
 import com.example.studying.studies.lesson13.Lesson13Activity;
+import com.example.studying.studies.lesson14.Lesson14Activity;
 import com.example.studying.studies.lesson2.Lesson2Activity;
 import com.example.studying.studies.lesson8.Lesson8Activity;
 import com.example.studying.studies.lesson9.Lesson9Activity;
@@ -188,6 +190,28 @@ public class MainActivity extends Activity {
             public void onClick(View view) {
 
                 Intent intent = new Intent(MainActivity.this, Lesson13Activity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.right_in, R.anim.left_out);
+            }
+        });
+
+        Button l14Button = findViewById(R.id.l14Button);
+        l14Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(MainActivity.this, Lesson14Activity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.right_in, R.anim.left_out);
+            }
+        });
+
+        Button dz14Button = findViewById(R.id.dz14Button);
+        dz14Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(MainActivity.this, Dz14Activity.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.right_in, R.anim.left_out);
             }

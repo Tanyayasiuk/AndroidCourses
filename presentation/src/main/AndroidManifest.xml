@@ -65,6 +65,8 @@
         <activity android:name=".dz11.AddProfileActivity"
             android:windowSoftInputMode="adjustResize"/>
         <activity android:name=".lesson13.Lesson13Activity"/>
+        <activity android:name=".lesson14.Lesson14Activity"/>
+        <activity android:name=".dz14.Dz14Activity"/>
 
     </application>
 

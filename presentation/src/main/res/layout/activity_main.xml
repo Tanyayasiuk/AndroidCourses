@@ -211,6 +211,30 @@
                 android:textSize="@dimen/otherInfo_textSize"
                 android:textStyle="bold" />
         </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent">
+            <Button
+                android:id="@+id/l14Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="Ls14"
+                android:textColor="@color/material_dark_primary"
+                android:textSize="@dimen/otherInfo_textSize"
+                android:textStyle="bold" />
+            <Button
+                android:id="@+id/dz14Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="DZ14"
+                android:textColor="@color/material_dark_primary"
+                android:textSize="@dimen/otherInfo_textSize"
+                android:textStyle="bold" />
+        </TableRow>
     </TableLayout>
     </ScrollView>
 </LinearLayout>

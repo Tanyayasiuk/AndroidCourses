@@ -8,6 +8,7 @@ import com.example.studying.domain.interacton.Base.CUseCase;
 import com.example.studying.domain.interacton.Base.UseCase;
 
 import java.util.ArrayList;
+
 import java.util.List;
 
 import io.reactivex.Observable;
@@ -31,6 +32,7 @@ public class ProfilesListUseCase extends UseCase<Void, List<ProfileModel>>{
                             model.setAge(p.getAge());
                             model.setId(p.getId());
                             list.add(model);
+
                         }
                         return list;
                     }

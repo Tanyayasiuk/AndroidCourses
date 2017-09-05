@@ -39,6 +39,7 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="3dp"
                 android:layout_marginStart="3dp"
+                android:contentDescription="@string/dz6_flag"
                 app:src="@{item.url}"/>
         </FrameLayout>
 
