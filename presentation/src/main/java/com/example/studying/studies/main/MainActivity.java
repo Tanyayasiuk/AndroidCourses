@@ -11,6 +11,7 @@ import com.example.studying.studies.R;
 import com.example.studying.studies.dz10.Dz10Activity;
 import com.example.studying.studies.dz11.Dz11Activity;
 import com.example.studying.studies.dz14.Dz14Activity;
+//import com.example.studying.studies.dz16.Dz16Activity;
 import com.example.studying.studies.dz2.Dz2Activity;
 import com.example.studying.studies.dz3.Dz3Activity;
 import com.example.studying.studies.dz4.Dz4Activity;
@@ -22,7 +23,10 @@ import com.example.studying.studies.dz9.Dz9Activity;
 import com.example.studying.studies.lesson12.Lesson12Activity;
 import com.example.studying.studies.lesson13.Lesson13Activity;
 import com.example.studying.studies.lesson14.Lesson14Activity;
+import com.example.studying.studies.lesson16.Lesson16Activity;
+import com.example.studying.studies.lesson18.Lesson18Activity;
 import com.example.studying.studies.lesson2.Lesson2Activity;
+import com.example.studying.studies.lesson22.MapsActivity;
 import com.example.studying.studies.lesson8.Lesson8Activity;
 import com.example.studying.studies.lesson9.Lesson9Activity;
 
@@ -212,6 +216,50 @@ public class MainActivity extends Activity {
             public void onClick(View view) {
 
                 Intent intent = new Intent(MainActivity.this, Dz14Activity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.right_in, R.anim.left_out);
+            }
+        });
+
+        Button l16Button = findViewById(R.id.l16Button);
+        l16Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(MainActivity.this,Lesson16Activity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.right_in, R.anim.left_out);
+            }
+        });
+
+        /*Button dz16Button = findViewById(R.id.dz16Button);
+        dz16Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(MainActivity.this, Dz16Activity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.right_in, R.anim.left_out);
+            }
+        });*/
+
+        /*Button l18Button = findViewById(R.id.l18Button);
+        l18Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(MainActivity.this,Lesson18Activity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.right_in, R.anim.left_out);
+            }
+        });
+*/
+        Button mapButton = findViewById(R.id.l18Button);
+        mapButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(MainActivity.this,MapsActivity.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.right_in, R.anim.left_out);
             }

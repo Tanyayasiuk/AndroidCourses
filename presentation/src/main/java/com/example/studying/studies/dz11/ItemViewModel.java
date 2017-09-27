@@ -1,5 +1,6 @@
 package com.example.studying.studies.dz11;
 
+
 public class ItemViewModel {
 
     public String name;

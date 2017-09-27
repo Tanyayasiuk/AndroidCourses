@@ -1,4 +1,5 @@
-package com.example.studying.studies.dz11;
+/*
+package com.example.studying.studies.dz16;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,18 +11,18 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.studying.studies.R;
-import com.example.studying.studies.databinding.ItemRv11Binding;
-import com.example.studying.studies.main.MainActivity;
+import com.example.studying.studies.databinding.ItemRv16Binding;
+import com.example.studying.studies.dz16.ItemViewModel;
 
 import java.util.List;
 
 
-public class Dz11Adapter extends RecyclerView.Adapter<Dz11Adapter.Holder> {
+public class Dz16Adapter extends RecyclerView.Adapter<Dz16Adapter.Holder> {
 
     private Context context;
     private List<ItemViewModel> itemsList;
 
-    public Dz11Adapter (Context context, List<ItemViewModel> itemsList){
+    public Dz16Adapter(Context context, List<ItemViewModel> itemsList){
         this.context = context;
         this.itemsList = itemsList;
     }
@@ -29,7 +30,7 @@ public class Dz11Adapter extends RecyclerView.Adapter<Dz11Adapter.Holder> {
     @Override
     public Holder onCreateViewHolder(ViewGroup parent, int viewType) {
         View root = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.item_rv_11, parent, false);
+                .inflate(R.layout.item_rv_16, parent, false);
         return new Holder(root);
     }
 
@@ -39,7 +40,8 @@ public class Dz11Adapter extends RecyclerView.Adapter<Dz11Adapter.Holder> {
         final String id = itemsList.get(position).id;
         Log.e("AAAAAA", "Id " + id);
 
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
+        */
+/*holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, EditProfileActivity.class);
@@ -47,7 +49,8 @@ public class Dz11Adapter extends RecyclerView.Adapter<Dz11Adapter.Holder> {
                 context.startActivity(intent);
 
             }
-        });
+        });*//*
+
     }
 
     @Override
@@ -58,7 +61,7 @@ public class Dz11Adapter extends RecyclerView.Adapter<Dz11Adapter.Holder> {
 
     public static class Holder extends RecyclerView.ViewHolder{
 
-        ItemRv11Binding binding;
+        ItemRv16Binding binding;
 
         public Holder(final View itemView) {
             super(itemView);
@@ -67,3 +70,4 @@ public class Dz11Adapter extends RecyclerView.Adapter<Dz11Adapter.Holder> {
         }
     }
 }
+*/

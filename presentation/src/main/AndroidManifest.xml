@@ -6,7 +6,12 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
-    <!-- //Проверка доступности интернета -->
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality. 
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- //Проверка доступности интернета -->
     <application
         android:name=".main.MyApplication"
         android:allowBackup="true"
@@ -50,24 +55,47 @@
 
         <activity android:name=".lesson6.Lesson6Activity" />
         <activity android:name=".dz6.Dz6Activity" />
-        <activity android:name=".lesson7.Lesson7Activity"/>
-        <activity android:name=".dz7.Dz7Activity"/>
-        <activity android:name=".dz7_1.Dz7_1Activity"/>
-        <activity android:name=".lesson8.Lesson8Activity"/>
-        <activity android:name=".lesson9.Lesson9Activity"/>
-        <activity android:name=".dz9.Dz9Activity"/>
-        <activity android:name=".dz10.Dz10Activity"/>
-        <activity android:name=".dz11.Dz11Activity"
-            android:noHistory="true"/>
-        <activity android:name=".dz11.EditProfileActivity"
-            android:windowSoftInputMode="adjustResize"/>
-        <activity android:name=".lesson12.Lesson12Activity"/>
-        <activity android:name=".dz11.AddProfileActivity"
-            android:windowSoftInputMode="adjustResize"/>
-        <activity android:name=".lesson13.Lesson13Activity"/>
-        <activity android:name=".lesson14.Lesson14Activity"/>
-        <activity android:name=".dz14.Dz14Activity"/>
+        <activity android:name=".lesson7.Lesson7Activity" />
+        <activity android:name=".dz7.Dz7Activity" />
+        <activity android:name=".dz7_1.Dz7_1Activity" />
+        <activity android:name=".lesson8.Lesson8Activity" />
+        <activity android:name=".lesson9.Lesson9Activity" />
+        <activity android:name=".dz9.Dz9Activity" />
+        <activity android:name=".dz10.Dz10Activity" />
+        <activity
+            android:name=".dz11.Dz11Activity"
+            android:noHistory="true" />
+        <activity
+            android:name=".dz11.EditProfileActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".lesson12.Lesson12Activity" />
+        <activity
+            android:name=".dz11.AddProfileActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".lesson13.Lesson13Activity" />
+        <activity android:name=".lesson14.Lesson14Activity" />
+        <activity
+            android:name=".dz14.Dz14Activity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".lesson16.Lesson16Activity" />
+        <!-- <activity android:name="dz16.Dz16Activity"/> -->
 
+        <activity android:name=".lesson18.Lesson18Activity" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".lesson22.MapsActivity"
+            android:label="@string/title_activity_maps"></activity>
     </application>
 
 </manifest>

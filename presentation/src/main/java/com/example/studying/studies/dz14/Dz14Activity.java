@@ -1,10 +1,14 @@
 package com.example.studying.studies.dz14;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
+import android.view.MotionEvent;
+import android.view.inputmethod.InputMethodManager;
 
 
 import com.example.studying.studies.R;
@@ -41,5 +45,20 @@ public class Dz14Activity extends BaseActivity {
         overridePendingTransition(R.anim.left_in, R.anim.right_out);
     }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.e("SSS", "OnPAUSE - main");
+    }
 
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        if (ev.getAction() ==  MotionEvent.ACTION_DOWN) hideKeyboard();
+        return super.dispatchTouchEvent(ev);
+    }
+
+    private void hideKeyboard() {
+        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(getWindow().getDecorView().getWindowToken(), 0);
+    }
 }

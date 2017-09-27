@@ -6,7 +6,10 @@ import android.util.Log;
 
 import com.example.studying.domain.interacton.Dz10UseCase;
 import com.example.studying.studies.base.BaseViewModel;
+import com.example.studying.studies.main.MyApplication;
 
+
+import javax.inject.Inject;
 
 import io.reactivex.annotations.NonNull;
 import io.reactivex.observers.DisposableObserver;
@@ -16,9 +19,13 @@ public class Dz10ViewModel implements BaseViewModel {
 
     public Activity activity;
     public ObservableField<String> name = new ObservableField<>("");
-    private Dz10UseCase useCase = new Dz10UseCase();
+    //private Dz10UseCase useCase = new Dz10UseCase();
+
+    @Inject
+    Dz10UseCase useCase;
 
     public Dz10ViewModel(Activity activity){
+        MyApplication.appComponent.inject(this);
         this.activity = activity;
     }
 

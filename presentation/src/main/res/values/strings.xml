@@ -34,6 +34,11 @@
     <string name="hint_name">name</string>
     <string name="hint_age">age</string>
     <string name="new_profile">New profile</string>
+    <string name="showButton">show</string>
+    <string name="showAllButton">show all</string>
+    <string name="deleteButton">delete</string>
+    <string name="updateButton">#update</string>
+    <string name="title_activity_maps">Map</string>
 
 
 </resources>

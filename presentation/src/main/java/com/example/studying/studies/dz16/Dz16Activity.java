@@ -1,6 +1,6 @@
-package com.example.studying.studies.dz11;
+/*
+package com.example.studying.studies.dz16;
 
-import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -8,24 +8,27 @@ import android.util.Log;
 
 import com.example.studying.studies.R;
 import com.example.studying.studies.base.BaseActivity;
-import com.example.studying.studies.databinding.ActivityDz11Binding;
-import com.example.studying.studies.main.MainActivity;
+import com.example.studying.studies.databinding.ActivityDz16Binding;
 
 import io.realm.Realm;
+import io.realm.RealmConfiguration;
 
 
-public class Dz11Activity extends BaseActivity {
+public class Dz16Activity extends BaseActivity {
 
+    Realm realm;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
-        Dz11ViewModel viewModel = new Dz11ViewModel(this);
+        Dz16ViewModel viewModel = new Dz16ViewModel(this);
         this.viewModel = viewModel;
 
-        ActivityDz11Binding binding = DataBindingUtil.setContentView(this, R.layout.activity_dz11);
+        ActivityDz16Binding binding = DataBindingUtil.setContentView(this, R.layout.activity_dz16);
         binding.setViewModel(viewModel);
+        realm = Realm.getDefaultInstance();
+        loadData();
         super.onCreate(savedInstanceState);
-        Log.e("BBB", "DZ11 created");
+        Log.e("BBB", "DZ16 created");
     }
 
     @Override
@@ -51,4 +54,9 @@ public class Dz11Activity extends BaseActivity {
         super.onDestroy();
         Log.e("BBB", "OnDESTROY - main");
     }
+
+    public void loadData(){
+        // Запихать данные из rest'a в local db
+    }
 }
+*/

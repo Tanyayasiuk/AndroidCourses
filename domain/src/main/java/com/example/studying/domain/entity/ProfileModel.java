@@ -1,10 +1,12 @@
 package com.example.studying.domain.entity;
 
-public class ProfileModel implements DomainModel{
+
+public class ProfileModel /*extends RealmObject*/implements DomainModel{
 
     private String firstName;
     private String lastName;
     private int age;
+
     private String id;
 
     public String getFirstName() {

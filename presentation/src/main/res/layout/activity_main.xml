@@ -235,6 +235,53 @@
                 android:textSize="@dimen/otherInfo_textSize"
                 android:textStyle="bold" />
         </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent">
+            <Button
+                android:id="@+id/l16Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="Ls16"
+                android:textColor="@color/material_dark_primary"
+                android:textSize="@dimen/otherInfo_textSize"
+                android:textStyle="bold" />
+            <Button
+                android:id="@+id/dz16Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="DZ16"
+                android:textColor="@color/material_dark_primary"
+                android:textSize="@dimen/otherInfo_textSize"
+                android:textStyle="bold" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent">
+            <Button
+                android:id="@+id/l18Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="Ls18"
+                android:textColor="@color/material_dark_primary"
+                android:textSize="@dimen/otherInfo_textSize"
+                android:textStyle="bold" />
+            <Button
+                android:id="@+id/dz18Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="DZ18"
+                android:textColor="@color/material_dark_primary"
+                android:textSize="@dimen/otherInfo_textSize"
+                android:textStyle="bold" />
+        </TableRow>
     </TableLayout>
     </ScrollView>
 </LinearLayout>
